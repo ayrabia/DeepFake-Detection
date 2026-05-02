@@ -126,6 +126,29 @@ python preprocessing/verify_dataset.py \
 
 ---
 
+## Progress
+
+| Step | Status | Notes |
+|---|---|---|
+| Repo structure | ✅ Done | All directories, scripts, model stubs, notebooks committed to GitHub |
+| FF++ download | ✅ Done | 5,000 videos (1,000 real + 4,000 fake × 4 types) at c23 compression |
+| Celeb-DF v2 download | ✅ Done | 6,229 videos, 19GB |
+| DFDC Preview download | ⏳ Pending | Needed at Week 8 only |
+| Frame extraction | 🔄 Running | extract_frames.py running on FF++ overnight |
+| Face cropping | ⏳ Pending | Runs after frame extraction |
+| FFT computation | ⏳ Pending | Runs after face cropping |
+| Sequence extraction | ⏳ Pending | Runs after face cropping |
+| Dataset CSV splits | ⏳ Pending | Runs after all preprocessing |
+| Upload to Google Drive | ⏳ Pending | Runs after preprocessing complete |
+| Spatial CNN training | ⏳ Pending | Colab T4, Weeks 3-4 |
+| Frequency CNN training | ⏳ Pending | Colab T4, Weeks 3-4 |
+| Temporal CNN+LSTM training | ⏳ Pending | Colab A100, Week 5 |
+| Fusion model training | ⏳ Pending | Colab A100, Weeks 6-7 |
+| Phase 3 backbone comparison | ⏳ Pending | Colab A100, Week 8 |
+| Cross-dataset evaluation | ⏳ Pending | Week 8 |
+| FastAPI + Grad-CAM demo | ⏳ Pending | Week 9 |
+| Final write-up | ⏳ Pending | Week 10 |
+
 ## Results
 
 Training on Google Colab A100. Cross-dataset columns report AUC with no fine-tuning.
