@@ -1,0 +1,27 @@
+# Core vision / ML
+opencv-python>=4.9.0
+mediapipe>=0.10.0
+numpy>=1.26.0
+torch>=2.2.0
+torchvision>=0.17.0
+
+# Data handling
+pandas>=2.2.0
+scikit-learn>=1.4.0
+
+# Visualization
+matplotlib>=3.8.0
+
+# Progress bars
+tqdm>=4.66.0
+
+# API
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+
+# ONNX export (Step 8 — demo serving)
+onnx>=1.16.0
+onnxruntime>=1.18.0
+
+# Phase 3 backbone comparison (Xception, EfficientNetV2)
+timm>=0.9.0
