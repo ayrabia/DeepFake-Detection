@@ -1,0 +1,32 @@
+Step 1 — Extract frames
+  The script opens every video file and saves one image every 5
+  frames. So a 10-second video at 30fps becomes about 60 JPEG
+  images instead of 300. This reduces the data size while keeping
+  enough visual information.
+
+  Step 2 — Crop faces
+  For each of those images, MediaPipe finds the face, draws a box
+  around it, adds a bit of padding so the edges aren't clipped, and
+   saves just the face at exactly 224×224 pixels. Images where no
+  face is found get skipped.
+
+  Step 3 — Compute FFT
+  Each face image gets converted to a frequency map — a visual
+  representation of the hidden statistical patterns in the image.
+  This is what the frequency model will train on. Saved as another
+  JPEG alongside the face crop.
+
+  Step 4 — Extract sequences
+  For each video, 16 face images are picked evenly spaced across
+  the full length and bundled together into one file. This is what
+  the temporal model will train on.
+
+  Step 5 — Build dataset
+  A spreadsheet (CSV) is created with one row per face image,
+  recording where the face file is, where the FFT file is, whether
+  it's real or fake, and which split (train/val/test) it belongs
+  to.
+
+  Step 6 — Verify
+  Prints a summary and shows you sample images so you can visually
+  confirm everything looks right before uploading to Colab.

@@ -36,3 +36,4 @@ env/
 results/*.png
 results/*.pt
 results/*.pth
+preprocessing/*.tflite

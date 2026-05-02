@@ -134,12 +134,12 @@ python preprocessing/verify_dataset.py \
 | FF++ download | ✅ Done | 5,000 videos (1,000 real + 4,000 fake × 4 types) at c23 compression |
 | Celeb-DF v2 download | ✅ Done | 6,229 videos, 19GB |
 | DFDC Preview download | ⏳ Pending | Needed at Week 8 only |
-| Frame extraction | 🔄 Running | extract_frames.py running on FF++ overnight |
-| Face cropping | ⏳ Pending | Runs after frame extraction |
-| FFT computation | ⏳ Pending | Runs after face cropping |
-| Sequence extraction | ⏳ Pending | Runs after face cropping |
-| Dataset CSV splits | ⏳ Pending | Runs after all preprocessing |
-| Upload to Google Drive | ⏳ Pending | Runs after preprocessing complete |
+| Frame extraction | ✅ Done | 226,706 frames from 5,000 FF++ videos |
+| Face cropping | ✅ Done | 456,928 face crops (97.2% detection rate), BlazeFace DNN |
+| FFT computation | ✅ Done | 456,928 FFT magnitude spectra in 15 min |
+| Sequence extraction | ✅ Done | 4,973 sequences (3,481 train / 746 val / 746 test) |
+| Dataset CSV splits | ✅ Done | 321,319 train / 67,582 val / 68,027 test (70/15/15 video-level) |
+| Upload to Google Drive | 🔄 Running | 90GB uploading via Drive for Desktop |
 | Spatial CNN training | ⏳ Pending | Colab T4, Weeks 3-4 |
 | Frequency CNN training | ⏳ Pending | Colab T4, Weeks 3-4 |
 | Temporal CNN+LSTM training | ⏳ Pending | Colab A100, Week 5 |
